@@ -1,7 +1,7 @@
 # Honey-Encryption-with-HoneyWord
 using NLP and honeyword to construct a honey encryption algorithm
 
-## Introduction of honey-encryption
+## Introduction of Honey-Encryption
 #### Original Password-Based Encrytion (PBE):
   
   
