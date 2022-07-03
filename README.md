@@ -22,3 +22,6 @@ Honey encryption由兩個主要步驟組成。
 ## Implementation
 
 ![image](https://user-images.githubusercontent.com/71398477/177034248-96bcab2d-95e6-4670-ab32-1c3337655745.png)
+
+#### Step1 :
+我們透過spaCy這個套件得到我們想要的句子各種屬性後，開始產生我們的seed。這邊做法就是把這個字詞在我們從opensource的dataset中收集到的dictionary在第幾個字，存下來他的index，還有句型，將這些數字通通串再一起，與randomNumber做xor產生seed。
