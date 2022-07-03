@@ -35,7 +35,8 @@ Honey encryption由兩個主要步驟組成。
 最後為了模擬傳輸，我們將加密過後產生的ciphertext用base64編碼輸出
 
 ## Limitation
-- 明文長度會影響Honey Encryption成效，若明文太長且上下文有關聯性，那麼僅用HE會使模仿出的明文看起來不太通順，容易因此被察覺是假明文
+明文長度會影響Honey Encryption成效，若明文太長且上下文有關聯性，那麼僅用HE會使模仿出的明文看起來不太通順，容易因此被察覺是假明文
 <!-- 改善方式: 結合Machine Learning，應用 Natural Language Procesing (NLP)  來仿造出更像明文的文章 -->
 
+Typo-safety Problem 
 
