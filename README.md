@@ -14,3 +14,11 @@ using NLP and honeyword to construct a honey encryption algorithm
 Honey encryption 便是為了反制 brute-force attack 而被設計出來的系統，即使使用錯誤的key，解密出的明文也會是有意義的字串或假的明文，讓攻擊者以為就是真正的明文。它能強化傳統的 Password-Based Encryption (PBE)，讓使用低強度密碼的用戶也能獲得相當的安全性。
 
 ![](https://i.imgur.com/NHbe8Dc.png)
+
+Honey encryption由兩個主要步驟組成。
+首先使用 DTE (Distribution Transforming Encoder) 將需要加密的明文從Message space(M)映射到Seed space(S)，然後再用 PBE (Password-Based Encryption) 對seed進行加密得到密文。
+
+
+## Implementation
+
+![image](https://user-images.githubusercontent.com/71398477/177034248-96bcab2d-95e6-4670-ab32-1c3337655745.png)
