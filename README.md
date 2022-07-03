@@ -18,7 +18,8 @@ Honey encryption 便是為了反制 brute-force attack 而被設計出來的系�
 Honey encryption由兩個主要步驟組成。
 首先使用 DTE (Distribution Transforming Encoder) 將需要加密的明文從Message space(M)映射到Seed space(S)，然後再用 PBE (Password-Based Encryption) 對seed進行加密得到密文。
 
-
+## Main Idea
+將Honeyword取代Honey Encryption中的Key。假設今天使用者註冊了一個服務，有一對帳號密碼。透過Honeyword generator我們可以得到很多相像的password儲存在資料庫中，讓攻擊者無法輕鬆找出密碼。那如果他想用暴力解也無法，因為無論是真假password，解出來的plaintext都像是真的。
 ## Implementation
 
 ![image](https://user-images.githubusercontent.com/71398477/177034248-96bcab2d-95e6-4670-ab32-1c3337655745.png)
@@ -35,7 +36,7 @@ Honey encryption由兩個主要步驟組成。
 最後為了模擬傳輸，我們將加密過後產生的ciphertext用base64編碼輸出
 
 ## Limitation
-明文長度會影響Honey Encryption成效，若明文太長且上下文有關聯性，那麼僅用HE會使模仿出的明文看起來不太通順，容易因此被察覺是假明文
+Semantics: 明文長度會影響Honey Encryption成效，若明文太長且上下文有關聯性，那麼僅用HE會使模仿出的明文看起來不太通順，容易因此被察覺是假明文
 <!-- 改善方式: 結合Machine Learning，應用 Natural Language Procesing (NLP)  來仿造出更像明文的文章 -->
 
 Typo-safety Problem 
