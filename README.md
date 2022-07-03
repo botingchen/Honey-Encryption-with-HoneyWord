@@ -28,3 +28,8 @@ Honey encryption由兩個主要步驟組成。
 
 #### Step2 :
 為了防範dictionary attack，我們同樣對password加鹽，產生我們的key
+
+#### Step3 :
+我們將產生的seed以及key用AES這個加密演算法加密
+原因很簡單，因為AES簡單好用
+最後為了模擬傳輸，我們將加密過後產生的ciphertext用base64編碼輸出
